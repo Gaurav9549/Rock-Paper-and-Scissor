@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Dangrek&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="scoreCont">
+            <ul>
+                <h1>ROCK</h1>
+                <h1>PAPER</h1>
+                <h1>SCISSORS</h1>
+            </ul>
+            <div class="score" id="compScore">
+                <span class="title">COMPUTER SCORE</span>
+                <span id="compPoint"></span>
+            </div>
+            <div class="score" id="urScore">
+                <span class="title">YOUR<br />
+                    SCORE</span>
+                <span id="userPoint"></span>
+            </div>
+        </div>
+
+        <div class="symbol"> 
+            <ul class="line1">
+                <button id="rock"><img src="rocks.png" /></button>
+                <span></span>
+                <button id="scissor"><img src="scissors.png" /></button>
+            </ul>
+            <div class="line2">
+                <span id="lineA"></span>
+            </div>
+            <div class="line3">
+                <span id="lineB"></span>
+            </div>
+            <button id="paper"><img src="papers.png" /></button>
+        </div>
+
+        <!-- keep in mind to update it that is display:none -->
+        <div class="rules" style="display: none">
+            <h2 id="ruleTitle">Game Rules</h2>
+            <ul id="ruleList">
+                <li id="list1">
+                    Rock beats scissors, scissors beat paper, and paper beats rock.
+                </li>
+                <li id="list2">
+                    Agree ahead of time whether you’ll count off “rock, paper, scissors,
+                    shoot” or just “rock, paper, scissors.”
+                </li>
+                <li id="list3">
+                    Use rock, paper, scissors to settle minor decisions or simply play
+                    to pass the time
+                </li>
+                <li id="list4">
+                    If both players lay down the same hand, each player lays down
+                    another hand
+                </li>
+            </ul>
+            <button id="crossBtn">X</button>
+
+        </div>
+        <button class="ruleBtn" style="display: none">RULES</button>
+
+        <div class="resultInterface" style="display: none;">
+            <div class="status">
+                <span id="userSel">YOU PICKED</span>
+                <span id="compSel">PC PICKED</span>
+            </div>
+            <div class="choice">
+                <button id="userSelection">
+                    <img src="papers.png" id="paperid" style="display: none;"/>
+                    <img src="scissors.png" id="scissorid" style="display: none;"/>
+                    <img src="rocks.png" id="rockid" style="display: none;"/>
+                </button>
+                <div class="resultCard" style="display: none;">
+                    <span id="winSpan"></span>
+                    <span id="againSpan">AGAINST PC</span>
+                    <button id="playAgainBtn" class="playAgain">PLAY AGAIN</button>
+                </div>
+                <button id="compSelection">
+                    <img src="papers.png" id="compPaper" style="display: none;"/>
+                    <img src="scissors.png" id="compScissor" style="display: none;"/>
+                    <img src="rocks.png" id="compRock" style="display: none;"/>
+                </button>
+            </div>
+        </div>
+        <div class="buttonpanel">
+            <button id="newRuleBtn">RULES</button>
+            <button id="nextBtn" style="display: none">NEXT</button>
+        </div>
+        <div class="finalInterface" style="display: none">
+            <div class="finalStatus">
+                <span id="stars"><img src="Group 5.png"></span>
+                <span id="cup"><img src="Vector.png"></span>
+            </div>
+        <div class="finaltext">
+            <span class="hurray" style="font-size: 91px;">HURRAY!!</span>
+            <span class="won" style="font-size: 41px;">YOU WON THE GAME</span>
+            <div class="reset">
+                <button onclick="window.location.href='index.html';" class="playAgain" id="resetBtn">PLAY AGAIN</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
